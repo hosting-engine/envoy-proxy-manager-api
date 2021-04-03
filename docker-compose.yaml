@@ -1,0 +1,8 @@
+version: '3.5'
+
+services:
+
+  ssh-server:
+    build: ./pkg/sshclient
+    ports:
+      - "22:2222"

@@ -1,0 +1,24 @@
+# Port and Address configuration
+Port 2222
+ListenAddress 0.0.0.0
+
+# Logging
+LogLevel INFO
+
+# Authentication:
+MaxAuthTries 3
+MaxSessions 100
+
+RSAAuthentication yes
+PubkeyAuthentication yes
+
+# The default is to check both .ssh/authorized_keys and .ssh/authorized_keys2
+# but this is overridden so installations will only check .ssh/authorized_keys
+AuthorizedKeysFile	.ssh/authorized_keys
+
+# To disable tunneled clear text passwords, change to no here!
+PasswordAuthentication yes
+PermitRootLogin yes
+
+# override default of no subsystems
+Subsystem	sftp	/usr/lib/ssh/sftp-server
